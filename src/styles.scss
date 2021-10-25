@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* You can add global styles to this file, and also import other style files */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.circle-cursor {
+  cursor: url("/assets/cursor.png") 64 64, auto;
+}
+
+.no-cursor {
+  cursor: url("/assets/cursor2.png") 64 64, auto;
+}
