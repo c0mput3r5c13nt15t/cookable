@@ -18,6 +18,12 @@ module.exports = {
           none: '0px',
           xs: '2px',
         },
+        lineClamp: {
+          7: '7',
+          8: '8',
+          9: '9',
+          10: '10',
+        }
       }
     },
     variants: {
@@ -25,7 +31,14 @@ module.exports = {
         blur: ["group-hover", "hover", "focus"],
         width: ["group-hover", "responsive", "hover", "focus"],
         display: ["group-hover", 'hover', 'focus'],
+        height: ["first", "last", "even"],
+        zIndex: ["first", "last", "even", "hover"],
+        margin: ["first", "last", "even"],
+        transitionProperty: ['hover', 'focus'],
+        scale: ['group-hover'],
       },
     },
-    plugins: [],
+    plugins: [
+      require('@tailwindcss/line-clamp'),
+    ],
 };

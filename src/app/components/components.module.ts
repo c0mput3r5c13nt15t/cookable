@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 import { ToolbarComponent } from "./toolbar/toolbar.component";
-import { ChoiceComponent } from './choice/choice.component';
-import { DecideComponent } from './decide/decide.component';
-import { ReceipeComponent } from './receipe/receipe.component';
+import { ChoiceFormComponent } from './choice-form/choice-form.component';
+import { RecommendedRecipesComponent } from './recommended-recipes/recommended-recipes.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
   ],
-  declarations: [ToolbarComponent, ChoiceComponent, DecideComponent, ReceipeComponent],
-  exports: [ToolbarComponent, ChoiceComponent, DecideComponent, ReceipeComponent]
+  declarations: [ToolbarComponent, ChoiceFormComponent, RecommendedRecipesComponent],
+  exports: [ToolbarComponent, ChoiceFormComponent, RecommendedRecipesComponent]
 })
 export class ComponentsModule {}
