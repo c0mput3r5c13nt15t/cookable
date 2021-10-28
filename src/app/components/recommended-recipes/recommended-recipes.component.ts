@@ -14,4 +14,8 @@ export class RecommendedRecipesComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.recipes);
   }
+
+  scrollToTop() {
+    window.scrollTo({top:0, left:0, behavior:'smooth'});
+  }
 }

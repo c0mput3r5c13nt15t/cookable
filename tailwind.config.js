@@ -23,6 +23,18 @@ module.exports = {
           8: '8',
           9: '9',
           10: '10',
+        },
+        colors: {
+          brown1: {
+            100: '#f8d9a3',
+            200: '#ffcb71',
+            300: '#ffbd4f'
+          },
+          brown2: {
+            100: '#f8c4a3',
+            200: '#f5a979',
+            300: '#f69151'
+          },
         }
       }
     },
@@ -31,9 +43,9 @@ module.exports = {
         blur: ["group-hover", "hover", "focus"],
         width: ["group-hover", "responsive", "hover", "focus"],
         display: ["group-hover", 'hover', 'focus'],
-        height: ["first", "last", "even"],
-        zIndex: ["first", "last", "even", "hover"],
-        margin: ["first", "last", "even"],
+        height: ["first", "even", "odd"],
+        zIndex: ["first", "even", "odd", "hover"],
+        margin: ["first", "even", "odd"],
         transitionProperty: ['hover', 'focus'],
         scale: ['group-hover'],
       },

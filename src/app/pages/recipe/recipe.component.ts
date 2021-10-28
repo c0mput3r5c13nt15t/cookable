@@ -38,6 +38,7 @@ export class RecipeComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     });
+    window.scrollTo(0, 0)
   }
 
 }

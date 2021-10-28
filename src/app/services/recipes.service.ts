@@ -22,4 +22,8 @@ export class RecipesService {
   public getRecipe(recipeId: number): Observable<Object> {
     return this.http.get(this.api + '/recipe/' + recipeId, this.options);
   }
+
+  public cook(chosen: string[][]): Observable<Object> {
+    return this.http.post(this.api + '/cook', chosen, this.options);
+  }
 }

@@ -1,4 +1,5 @@
 export interface recipe {
+  imageUrl?: string,
   name: string,
   eta: number,
   price: number,

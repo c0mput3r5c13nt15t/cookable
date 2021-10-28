@@ -1,4 +1,7 @@
-<div>
+<div class="flex flex-col h-screen">
   <app-toolbar></app-toolbar>
-  <router-outlet></router-outlet>
+  <main class="flex-grow bg-gray-100">
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="bg-gray-200"><app-footer></app-footer></footer>
 </div>

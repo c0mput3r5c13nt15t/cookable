@@ -9,12 +9,16 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from "./components/components.module";
 import { HomeComponent } from './pages/home/home.component';
 import { RecipeComponent } from './pages/recipe/recipe.component';
+import { AboutComponent } from './pages/about/about.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RecipeComponent
+    RecipeComponent,
+    AboutComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
