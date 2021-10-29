@@ -7,7 +7,12 @@ import {TermsComponent} from "./pages/terms/terms.component";
 
 const routes: Routes = [
   {
-    path: 'recipes',
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/cook'
+  },
+  {
+    path: 'cook',
     component: HomeComponent
   },
   {
@@ -19,7 +24,7 @@ const routes: Routes = [
     component: TermsComponent
   },
   {
-    path: 'recipes/:recipeId',
+    path: 'cook/:recipeId',
     component: RecipeComponent
   },
 ];

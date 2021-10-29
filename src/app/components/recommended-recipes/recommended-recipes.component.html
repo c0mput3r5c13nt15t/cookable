@@ -19,7 +19,7 @@
         <p class="line-clamp-7 max-w-sm">{{ recipe.description }}</p>
 
         <div class="absolute -bottom-6 w-full -ml-4 flex justify-center">
-          <button routerLink="/recipes/1" class="circle-cursor bg-black text-white block rounded-full h-14 w-48 shadow-2xl group-hover:scale-150 hover:bg-red-100 hover:text-black transition-all focus:bg-red-50 focus:text-black">Show me the recipe</button>
+          <button routerLink="/cook/1" class="circle-cursor bg-black text-white block rounded-full h-14 w-48 shadow-2xl group-hover:scale-150 hover:bg-red-100 hover:text-black transition-all focus:bg-red-50 focus:text-black">Show me the recipe</button>
         </div>
       </div>
       <div class="col-span-3">
@@ -32,34 +32,34 @@
         <button *ngIf="recipes.length > 0" (click)="scrollToTop()" class="transition-all circle-cursor block mx-auto rounded-full h-16 w-52 bg-opacity-50 hover:bg-opacity-50 bg-white hover:bg-black text-black hover:text-white font-semibold">Revise choices</button>
       </div>
     </div>
-    <div class="grid grid-cols-1 grid-rows-3 absolute h-2/3 items-center mx-5 visible md:invisible">
-      <div class="pt-5 group transition-all bg-gray-50 rounded-lg p-4 block h-60 shadow-2xl odd:z-0 even:z-10 odd:mx-2 transform hover:scale-110 hover:z-30" *ngFor="let recipe of recipes">
-        <h1 class="text-4xl mb-4"><b>{{ recipe.name }}</b></h1>
-        <p class="max-w-lg my-3">
+    <div class="grid grid-cols-1 grid-rows-3 gap-y-10 absolute h-2/3 items-center mx-5 visible md:invisible">
+      <div class="group transition-all bg-gray-50 rounded-lg p-2 block h-40 shadow-2xl odd:z-0 even:z-10 odd:mx-2 transform hover:scale-110 hover:z-30" *ngFor="let recipe of recipes">
+        <h1 class="text-xl mb-2"><b>{{ recipe.name }}</b></h1>
+        <p class="max-w-lg my-2">
           <b class="inline-flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             {{ recipe.eta }}min
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             {{ recipe.price }}€</b>
         </p>
-        <p class="line-clamp-3 max-w-sm">{{ recipe.description }}</p>
+        <p class="line-clamp-2 max-w-sm text-md">{{ recipe.description }}</p>
 
         <div class="absolute -bottom-6 w-full -ml-4 flex justify-center">
-          <button routerLink="/recipes/1" class="circle-cursor bg-black text-white block rounded-full h-14 w-48 shadow-2xl group-hover:scale-150 hover:bg-red-100 hover:text-black transition-all focus:bg-red-50 focus:text-black">Show me the recipe</button>
+          <button routerLink="/cook/1" class="circle-cursor bg-black text-white block rounded-full h-10 w-48 shadow-2xl group-hover:scale-150 hover:bg-red-100 hover:text-black transition-all focus:bg-red-50 focus:text-black">Show me the recipe</button>
         </div>
       </div>
-      <div class="col-span-1 mt-20">
+      <div class="col-span-1 mt-20 mb-5">
         <ng-container *ngIf="recipes.length == 0">
           <div class="text-2xl text-center my-10">
             <b>You have to fill out the form first</b>
           </div>
         </ng-container>
-        <button *ngIf="recipes.length == 0" (click)="scrollToTop()" class="transition-all circle-cursor block mx-auto rounded-full h-16 w-52 bg-opacity-50 hover:bg-opacity-50 bg-white hover:bg-black text-black hover:text-white font-semibold">Let me try again</button>
-        <button *ngIf="recipes.length > 0" (click)="scrollToTop()" class="transition-all circle-cursor block mx-auto rounded-full h-16 w-52 bg-opacity-50 hover:bg-opacity-50 bg-white hover:bg-black text-black hover:text-white font-semibold">Revise choices</button>
+        <button *ngIf="recipes.length == 0" (click)="scrollToTop()" class="transition-all circle-cursor block mx-auto rounded-full h-10 w-36 bg-opacity-50 hover:bg-opacity-50 bg-white hover:bg-black text-black hover:text-white font-semibold">Let me try again</button>
+        <button *ngIf="recipes.length > 0" (click)="scrollToTop()" class="transition-all circle-cursor block mx-auto rounded-full h-10 w-36 bg-opacity-50 hover:bg-opacity-50 bg-white hover:bg-black text-black hover:text-white font-semibold">Revise choices</button>
       </div>
     </div>
   </ng-container>

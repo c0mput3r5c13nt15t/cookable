@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   choices: choice[] = [
     {
       choiceOf: "meat",
+      type: 'single',
       options: [
         {
           value: 'beef',
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
     },
     {
       choiceOf: "bun",
+      type: 'single',
       options: [
         {
           value: 'normal',
@@ -42,6 +44,30 @@ export class HomeComponent implements OnInit {
           name: 'Full grain',
           imageUrl: '/assets/choices/bun_full_grain.png',
           color: 'brown2'
+        }
+      ]
+    },
+    {
+      choiceOf: "garnish",
+      type: 'multiple',
+      options: [
+        {
+          value: 'salad',
+          name: 'Salad',
+          imageUrl: '/assets/choices/salad.png',
+          color: 'green'
+        },
+        {
+          value: 'blueberries',
+          name: 'Blueberries',
+          imageUrl: '/assets/choices/blueberries.png',
+          color: 'blue'
+        },
+        {
+          value: 'cheese',
+          name: 'Cheese',
+          imageUrl: '/assets/choices/tofu.png',
+          color: 'yellow'
         }
       ]
     }
@@ -63,6 +89,7 @@ export class HomeComponent implements OnInit {
   }
 
   chose(value: any) {
+    console.log(value);
     this.chosen.push([value]);
     if (this.chosen.length == this.choices.length) {
       this.recipesService.cook(this.chosen).subscribe({

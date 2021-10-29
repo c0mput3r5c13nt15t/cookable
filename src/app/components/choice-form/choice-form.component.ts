@@ -12,13 +12,16 @@ export class ChoiceFormComponent implements OnInit {
   @Input() options: option[] = [];
   @Output() choseSideEvent = new EventEmitter<string[]>();
 
+  value: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   choseSide(endOfForm: HTMLElement, value: string) {
-    this.choseSideEvent.emit([this.choiceOf, value]);
+    this.value = value;
+    this.choseSideEvent.emit([this.choiceOf, this.value]);
     this.scroll(endOfForm);
   }
 

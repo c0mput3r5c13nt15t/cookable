@@ -1,0 +1,20 @@
+<div class="w-full h-screen circle-cursor">
+  <ng-container *ngFor="let option of options">
+    <div [ngClass]="'overflow-x-hidden group h-full float-left hover:bg-' + option.color + '-200 w-1/' + options.length + ' items-center grid grid-cols-1 grid grid-rows-4 justify-items-center pt-36 bg-' + option.color + '-100 transition-all'">
+      <div class="object-contain w-2/3 filter blur-xs group-hover:blur-none group-hover:w-9/12 row-span-3 mx-auto">
+        <img [src]="option.imageUrl" [alt]="option.imageUrl"/>
+      </div>
+      <button (click)="selectSide(option.value)" [ngClass]="values.includes(option.value) ? 'bg-' + option.color + '-200 group-hover:bg-' + option.color + '-300 circle-cursor row-span-4 w-full md:w-36 h-10 md:h-16 transition-all rounded-full mx-auto shadow-2xl' : 'circle-cursor row-span-4 w-10 md:w-16 h-10 md:h-16 group-hover:w-full md:group-hover:w-36 hover:bg-white hover:text-black transition-all bg-black rounded-full text-white mx-auto shadow-2xl'">
+        <div *ngIf="!values.includes(option.value)" class="inline">+</div><div *ngIf="values.includes(option.value)" class="inline">-</div><div [ngClass]="values.includes(option.value) ? 'inline' : 'hidden group-hover:inline'"> {{ option.name }}</div>
+      </button>
+    </div>
+  </ng-container>
+  <div *ngFor="let e of [].constructor(options.length - 1); let i = index" (click)="submit(end)"  [ngClass]="'done-div absolute left-' + (i+1) + '/' + options.length">
+    <button class="done-button circle-cursor bg-black text-white block rounded-full p-2 md:p-3 shadow-2xl group-hover:scale-150 hover:bg-white hover:text-black transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 md:h-7 h-5 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+  </div>
+</div>
+<div #end></div>
