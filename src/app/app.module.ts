@@ -7,18 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ComponentsModule } from "./components/components.module";
-import { HomeComponent } from './pages/home/home.component';
-import { RecipeComponent } from './pages/recipe/recipe.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { BurgerComponent } from './pages/burger/burger.component';
+import { PizzaComponent } from './pages/pizza/pizza.component';
+import { PastaComponent } from './pages/pasta/pasta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    RecipeComponent,
     AboutComponent,
-    TermsComponent
+    TermsComponent,
+    BurgerComponent,
+    PizzaComponent,
+    PastaComponent
   ],
   imports: [
     BrowserModule,

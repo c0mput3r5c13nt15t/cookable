@@ -1,0 +1,6 @@
+<ng-container *ngFor="let choice of choices">
+  <app-choice-form *ngIf="choice.type == 'single'" (choseSideEvent)="chose($event)" [choiceOf]="choice.choiceOf" [options]="choice.options"></app-choice-form>
+  <app-multiple-choice-form *ngIf="choice.type == 'multiple'" (submitEvent)="chose($event)" [choiceOf]="choice.choiceOf" [options]="choice.options"></app-multiple-choice-form>
+</ng-container>
+<app-recommended-recipes [recipes]="recipes"></app-recommended-recipes>
+<footer class="bg-gray-200"><app-footer></app-footer></footer>

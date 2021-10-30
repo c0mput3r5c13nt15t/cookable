@@ -1,19 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./pages/home/home.component";
-import {RecipeComponent} from "./pages/recipe/recipe.component";
 import {AboutComponent} from "./pages/about/about.component";
 import {TermsComponent} from "./pages/terms/terms.component";
+import {BurgerComponent} from "./pages/burger/burger.component";
+import {PastaComponent} from "./pages/pasta/pasta.component";
+import {PizzaComponent} from "./pages/pizza/pizza.component";
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/cook'
+    redirectTo: '/burger'
   },
   {
-    path: 'cook',
-    component: HomeComponent
+    path: 'burger',
+    component: BurgerComponent
+  },
+  {
+    path: 'pasta',
+    component: PastaComponent
+  },
+  {
+    path: 'pizza',
+    component: PizzaComponent
   },
   {
     path: 'about',
@@ -22,11 +31,7 @@ const routes: Routes = [
   {
     path: 'terms',
     component: TermsComponent
-  },
-  {
-    path: 'cook/:recipeId',
-    component: RecipeComponent
-  },
+  }
 ];
 
 @NgModule({

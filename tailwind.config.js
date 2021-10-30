@@ -30,11 +30,19 @@ module.exports = {
             200: '#ffcb71',
             300: '#ffbd4f'
           },
+          orange: {
+            100: '#f5c7a6',
+            200: '#f3b284',
+            300: '#f19b5f'
+          },
           brown2: {
             100: '#f8c4a3',
             200: '#f5a979',
             300: '#f69151'
           },
+        },
+        width: {
+          '1/1': '100%',
         }
       }
     },
@@ -47,7 +55,7 @@ module.exports = {
         zIndex: ["first", "even", "odd", "hover"],
         margin: ["first", "even", "odd"],
         transitionProperty: ['hover', 'focus'],
-        scale: ['group-hover'],
+        scale: ['group-hover', 'hover'],
       },
     },
     plugins: [
