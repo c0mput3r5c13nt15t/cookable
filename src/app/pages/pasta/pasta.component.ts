@@ -131,7 +131,6 @@ export class PastaComponent implements OnInit {
   }
 
   chose(value: any) {
-    console.log(value);
     this.chosen.push([value]);
     if (this.chosen.length == this.choices.length) {
       this.recipesService.cook(this.chosen).subscribe({

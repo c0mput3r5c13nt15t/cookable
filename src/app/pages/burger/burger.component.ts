@@ -123,6 +123,7 @@ export class BurgerComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    window.scrollTo(0, 0);
     if (this.recipes.length > 0) {
       window.scrollTo(0, 948*this.choices.length);
     } else {
@@ -131,7 +132,6 @@ export class BurgerComponent implements OnInit {
   }
 
   chose(value: any) {
-    console.log(value);
     this.chosen.push([value]);
     if (this.chosen.length == this.choices.length) {
       this.recipesService.cook(this.chosen).subscribe({
