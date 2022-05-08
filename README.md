@@ -35,9 +35,5 @@ Those are all the specific dependencies:
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
 
-## Who did this?
-Basically just me :) and if you want to contact me here's my email:
-[pauljustus279@gmail.com](mailto:pauljustus279@gmail.com?subject=Cookable)
-
 ## Anything else
 Note: The images are not mine and were picked from the internet at random.
